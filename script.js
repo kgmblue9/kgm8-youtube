@@ -71,5 +71,5 @@
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+    gapi.auth2.init({client_id: "480565195212-hlsv6ugibekr2pm4otj9lc2032p53m7o.apps.googleusercontent.com"});
   });
