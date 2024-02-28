@@ -30,11 +30,6 @@ function authenticate() {
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
-                console.log("테스트1: ", response.result);
-                console.log("테스트3: ", response.result.items);
-                console.log("테스트4: ", response.result.items[0]);
-                console.log("테스트5: ", response.result.items[0].id);
-                console.log("테스트5: ", response.result.items[0].id.videoId);
               },
               function(err) { console.error("Execute error", err); });
   }
@@ -44,7 +39,7 @@ function authenticate() {
 
   function render(){
     let resultHTML = `<iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/M45chOHpnDY"
+    src="https://www.youtube.com/embed/${response.result.items[0].id.videoId}"
     frameborder="0" allowfullscreen></iframe>
     `
     firstSong.innerHTML = resultHTML;

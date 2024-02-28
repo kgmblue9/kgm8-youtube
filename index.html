@@ -11,12 +11,18 @@
   <button onclick="authenticate().then(loadClient)">authorize and load</button>
 
   <div>
-    <input type="text" id="singer">
-    <input type="text" id="song-title">
-    <button id="sing-youtube">실행</button>
+    <div>
+      <label>가수: </label>
+      <input type="text" id="singer">
+    </div>
+    <div>
+      <label>곡명: </label>
+      <input type="text" id="song-title">
+    </div>
   </div>
 
-  <button onclick="execute()">execute</button>
+  <button onclick="execute()">가져오기</button>
+  <button id="sing-youtube">첫곡 실행</button>
   
   <div id="first-song">
     <!-- <iframe id="ytplayer" type="text/html" width="720" height="405"
