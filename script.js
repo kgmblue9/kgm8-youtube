@@ -42,7 +42,7 @@ function authenticate() {
   function render(){
     let resultHTML = `<iframe id="ytplayer" type="text/html" width="720" height="405"
     src="https://www.youtube.com/embed/M45chOHpnDY"
-    frameborder="0" allowfullscreen>
+    frameborder="0" allowfullscreen></iframe>
     `
     firstSong.innerHTML = resultHTML;
   }
