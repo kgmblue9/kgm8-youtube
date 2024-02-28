@@ -1,6 +1,9 @@
 let singer = document.getElementById("singer");
 let songTitle = document.getElementById("song-title");
 let firstSong = document.getElementById("first-song");
+let singYoutube = document.getElementById("sing-youtube");
+
+singYoutube.addEventListener("click",render);
 
 function authenticate() {
     return gapi.auth2.getAuthInstance()
