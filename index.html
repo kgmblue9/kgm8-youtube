@@ -9,13 +9,14 @@
   <body>
   
   <button onclick="authenticate().then(loadClient)">authorize and load</button>
-  <button onclick="execute()">execute</button>
 
   <div>
     <input type="text" id="singer">
     <input type="text" id="song-title">
     <button id="sing-youtube">실행</button>
   </div>
+
+  <button onclick="execute()">execute</button>
   
   <div id="first-song">
     <!-- <iframe id="ytplayer" type="text/html" width="720" height="405"

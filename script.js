@@ -46,3 +46,5 @@ function authenticate() {
     `
     firstSong.innerHTML = resultHTML;
   }
+
+  console.log(Response[0].id.videoId);
