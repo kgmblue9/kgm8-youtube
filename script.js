@@ -1,9 +1,9 @@
 let singer = document.getElementById("singer");
 let songTitle = document.getElementById("song-title");
 let firstSong = document.getElementById("first-song");
-let singYoutube = document.getElementById("sing-youtube");
+// let singYoutube = document.getElementById("sing-youtube");
 
-singYoutube.addEventListener("click",render);
+// singYoutube.addEventListener("click",render);
 
 function authenticate() {
     return gapi.auth2.getAuthInstance()
@@ -30,17 +30,28 @@ function authenticate() {
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
+
+                let resultHTML = `<iframe id="ytplayer" type="text/html" width="720" height="405"
+                src="https://www.youtube.com/embed/${response.result.items[0].id.videoId}"
+                frameborder="0" allowfullscreen></iframe>
+                `
+                firstSong.innerHTML = resultHTML;
+
               },
               function(err) { console.error("Execute error", err); });
+
+
+              
   }
+  
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "480565195212-hlsv6ugibekr2pm4otj9lc2032p53m7o.apps.googleusercontent.com"});
   });
 
-  function render(){
-    let resultHTML = `<iframe id="ytplayer" type="text/html" width="720" height="405"
-    src="https://www.youtube.com/embed/${response.result.items[0].id.videoId}"
-    frameborder="0" allowfullscreen></iframe>
-    `
-    firstSong.innerHTML = resultHTML;
-  }
+  // function render(){
+  //   let resultHTML = `<iframe id="ytplayer" type="text/html" width="720" height="405"
+  //   src="https://www.youtube.com/embed/${response.result.items[0].id.videoId}"
+  //   frameborder="0" allowfullscreen></iframe>
+  //   `
+  //   firstSong.innerHTML = resultHTML;
+  // }
