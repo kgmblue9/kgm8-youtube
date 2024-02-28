@@ -26,7 +26,7 @@ function authenticate() {
         "snippet"
       ],
       "maxResults": 25,
-      "q": `${singer}&&${songTitle}`,
+      "q": `${singer.value}&&${songTitle.value}`,
       "regionCode": "kr"
     })
         .then(function(response) {
@@ -47,4 +47,7 @@ function authenticate() {
     firstSong.innerHTML = resultHTML;
   }
 
-  console.log(Response[0].id.videoId);
+  console.log("테스트1: ", Response[0]);
+  console.log("테스트2: ", Response(0));
+  console.log("테스트3: ", Response[0].id);
+  console.log("테스트4: ", Response[0].id.videoId);
