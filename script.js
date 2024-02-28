@@ -3,6 +3,8 @@ let songTitle = document.getElementById("song-title");
 let firstSong = document.getElementById("first-song");
 let singYoutube = document.getElementById("sing-youtube");
 
+console.log(singYoutube);
+
 singYoutube.addEventListener("click",render);
 
 function authenticate() {
@@ -42,6 +44,5 @@ function authenticate() {
     src="https://www.youtube.com/embed/M45chOHpnDY"
     frameborder="0" allowfullscreen>
     `
-    firstSong.innerHTML = resultHTML;
+    return firstSong.innerHTML = resultHTML;
   }
-  render();
