@@ -3,8 +3,6 @@ let songTitle = document.getElementById("song-title");
 let firstSong = document.getElementById("first-song");
 let singYoutube = document.getElementById("sing-youtube");
 
-console.log(singYoutube);
-
 singYoutube.addEventListener("click",render);
 
 function authenticate() {
@@ -32,6 +30,10 @@ function authenticate() {
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
+                console.log("테스트1: ", Response[0]);
+                console.log("테스트2: ", Response(0));
+                console.log("테스트3: ", Response[0].id);
+                console.log("테스트4: ", Response[0].id.videoId);
               },
               function(err) { console.error("Execute error", err); });
   }
