@@ -44,5 +44,5 @@ function authenticate() {
     src="https://www.youtube.com/embed/M45chOHpnDY"
     frameborder="0" allowfullscreen>
     `
-    return firstSong.innerHTML = resultHTML;
+    firstSong.innerHTML = resultHTML;
   }
