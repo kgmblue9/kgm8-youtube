@@ -30,10 +30,11 @@ function authenticate() {
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
-                console.log("테스트1: ", response[0]);
-                console.log("테스트2: ", response(0));
-                console.log("테스트3: ", response[0].id);
-                console.log("테스트4: ", response[0].id.videoId);
+                console.log("테스트1: ", response.result);
+                console.log("테스트3: ", response.result.items);
+                console.log("테스트4: ", response.result.items[0]);
+                console.log("테스트5: ", response.result.items[0].id);
+                console.log("테스트5: ", response.result.items[0].id.videoId);
               },
               function(err) { console.error("Execute error", err); });
   }
@@ -48,8 +49,3 @@ function authenticate() {
     `
     firstSong.innerHTML = resultHTML;
   }
-
-  console.log("테스트11: ", response[0]);
-  console.log("테스트12: ", response(0));
-  console.log("테스트13: ", response[0].id);
-  console.log("테스트14: ", response[0].id.videoId);
